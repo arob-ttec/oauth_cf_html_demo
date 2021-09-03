@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<head>
+ <title>oAuth Test - Code Flow</title>
+ <meta charset='UTF-8'>
+ <style type='text/css'></style>
+ <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+</head>
+<body>
+<!-- BEGIN LivePerson Monitor Tag -->
+<script type='text/javascript'>window.lpTag=window.lpTag||{​​​​​​​​}​​​​​​​​,'undefined'==typeof window.lpTag._tagCount?(window.lpTag={​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​wl:lpTag.wl||null,scp:lpTag.scp||null,site:'45322705'||'',section:lpTag.section||'',tagletSection:lpTag.tagletSection||null,autoStart:lpTag.autoStart!==!1,ovr:lpTag.ovr||{​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,_v:'1.10.0',_tagCount:1,protocol:'https:',events:{​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​bind:function(t,e,i){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​lpTag.defer(function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​lpTag.events.bind(t,e,i)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,0)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,trigger:function(t,e,i){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​lpTag.defer(function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​lpTag.events.trigger(t,e,i)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,1)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,defer:function(t,e){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​0===e?(this._defB=this._defB||[],this._defB.push(t)):1===e?(this._defT=this._defT||[],this._defT.push(t)):(this._defL=this._defL||[],this._defL.push(t))}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,load:function(t,e,i){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​var n=this;setTimeout(function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​n._load(t,e,i)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,0)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,_load:function(t,e,i){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​var n=t;t||(n=this.protocol+'//'+(this.ovr&&this.ovr.domain?this.ovr.domain:'lptag.liveperson.net')+'/tag/tag.js?site='+this.site);var o=document.createElement('script');o.setAttribute('charset',e?e:'UTF-8'),i&&o.setAttribute('id',i),o.setAttribute('src',n),document.getElementsByTagName('head').item(0).appendChild(o)}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,init:function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​this._timing=this._timing||{​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,this._timing.start=(new Date).getTime();var t=this;window.attachEvent?window.attachEvent('onload',function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​t._domReady('domReady')}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​):(window.addEventListener('DOMContentLoaded',function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​t._domReady('contReady')}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,!1),window.addEventListener('load',function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​t._domReady('domReady')}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,!1)),'undefined'===typeof window._lptStop&&this.load()}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,start:function(){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​this.autoStart=!0}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,_domReady:function(t){​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​this.isDom||(this.isDom=!0,this.events.trigger('LPT','DOM_READY',{​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​t:t}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​)),this._timing[t]=(new Date).getTime()}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,vars:lpTag.vars||[],dbs:lpTag.dbs||[],ctn:lpTag.ctn||[],sdes:lpTag.sdes||[],hooks:lpTag.hooks||[],identities:lpTag.identities||[],ev:lpTag.ev||[]}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,lpTag.init()):window.lpTag._tagCount+=1;
+</script>
+<!-- END LivePerson Monitor Tag -->
+
+<!-- BEGIN Cookie Helper Functions -->
+<script type="text/javascript">
+function getCookie(cname) {​​​​​​​​​
+  var name = cname + "=";
+  var decodedCookie = decodedURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i=0; i < ca.length; i++) {​​​​​​​​​
+    var c = ca[i];
+    while (c.charAt(0) == '') {​​​​​​​​​
+      c = c.substring(1);
+    }​​​​​​​​​
+    if (c.indexOf(name) == 0) {​​​​​​​​​
+      return c.substring(name.length, c.length);
+    }​​​​​​​​​
+  }​​​​​​​​​
+  return "";
+}​​​​​​​​​
+
+function checkCookie(cname) {​​​​​​​​​
+  var cvalue = getCookie(cname);
+  if (cvalue != "") {​​​​​​​​​
+    logger(`${​​​​​​​​​cname}​​​​​​​​​ = ${​​​​​​​​​cvalue}​​​​​​​​​`);
+    return cvalue;
+  }​​​​​​​​​ else {​​​​​​​​​
+    logger(`${​​​​​​​​​cname}​​​​​​​​​ cookie not found!`);
+    return "";
+  }​​​​​​​​​
+}​​​​​​​​​
+</script>
+<!-- END Cookie Helper Functions -->
+
+<!-- BEGIN lpGetCode Method -->
+<script type='text/javascript'>
+// JS Method 'lpGetCode' for oAuth 2.0 Code Flow Goes Here
+function logger(text) {​​​​​​​​
+    console.info(`%c **lpLog** ${​​​​​​​​text}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​`,'background:#002f6d;#fff'); 
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​  
+
+ // For oAuth 2.0 Code Flow
+ var code;
+
+ // Change cnf values to your own values
+ // redirectURI: set to demo page
+ // authURI: Same as auth0 authorize endpoint
+ // clientID: from auth0 settings
+ // response_type: leave as is
+ var cnf = {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   redirectURI: 'https://arob-ttec.github.io/oauth_code_flow_demo/',
+   authURI: 'https://dev-ttec-arob.us.auth0.com/authorize',
+   clientID: 'DHZEqPgrHeOeWn7BE0ihf5fYbGCmLUa5-',
+   response_type: 'code'
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​;
+
+ // On-page oauth code flow method
+ lpGetCode = function (callback) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   code = getParameterByName('code')
+   if (code == null) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+     console.log('code undefined');
+     document.location = cnf.authURI + '?' + $.param({​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+       client_id: cnf.clientID,
+       response_type: cnf.response_type,
+       scope: 'openid email profile',
+       redirect_uri: cnf.redirectURI
+     }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​);
+   }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ else {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+     console.log('Got the Authcode from redirect url::' + code);
+     var result = {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+       ssoKey: code,
+       redirect_uri: cnf.redirectURI
+     }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​;
+     callback(result);
+   }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​;
+
+ function getParameterByName(name, url) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   if (!url) url = window.location.href;
+   name = name.replace(/[\[\]]/g, '\\$&');
+   var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+     results = regex.exec(url);
+   if (!results) return null;
+   if (!results[2]) return '';
+   return decodeURIComponent(results[2].replace(/\+/g, ' '));
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+
+
+ // Need to define one time on the page 
+ lpTag.sdes = lpTag.sdes || []; 
+
+ // Web tag - Send visitorLoggedIn to Live Person.
+ // Define per https://developers.liveperson.com/web-tag-sdes.html
+ var CustInfo = {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   'type': 'ctmrinfo', //MANDATORY customer info
+   'info': {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+     'ctype': 'visitorLoggedIn'
+   }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​;
+
+ // READ: 
+ // https://developers.liveperson.com/consumer-authentication-detailed-api.html
+ lpTag.identities=[];
+ lpTag.identities.push(identityFn);
+ function identityFn(callback) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   callback({​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+     iss: 'Test',
+     acr: 'loa1',
+     //sub: 'test123456785555444'
+     sub: checkCookie('LPSID-45322705') //Your siteID, gets unique ID 
+   }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​);
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+
+ // check user location before sending customer info
+ if (window.location.href.indexOf('/oauth_code_flow_demo/') > 0) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   sendCtype();
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+
+ // Function to send customer info
+ function sendCtype() {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+   if (lpTag.sdes.send) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+     lpTag.sdes.send(CustInfo);
+     clearTimeout(sendCtype);
+     //return false;
+   }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ else {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+     setTimeout(sendCtype, 50);
+   }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+ }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+
+</script>
+<!-- END lpGetCode Method -->
+
+<script type='text/javascript'>
+// This code is only needed if using section(s) as your 
+// engagement entry point
+lpTag.section = ['section1','section2'];
+</script>
+
+<!-- This div ID is from step 9 of creating the engagement -->
+ <div id='lpAuthButton'></div>
+
+<!-- BEGIN code to workaround lpTag messaging bug -->
+<script type='text/javascript'>
+// lpTag.events.bind - INSERT BUG WORKAROUND CODE FROM BELOW HERE
+const lpLocalStorage_demo = window.localStorage;
+
+function autoClick() {​​​​​​​​
+    var x = document.getElementsByClassName('LPMoverlay')[0].id;
+    document.getElementById(x).click();
+}​​​​​​​​
+
+// Remove engagementId from storage when conversation ends.
+lpTag.events.bind({​​​​​​​​
+    eventName: 'state',
+    appName: 'lpUnifiedWindow',
+    func: function processThis(data, eventInfo) {​​​​​​​​​​​​​​​
+        const {​​​​​​​​​​​​​​​ state }​​​​​​​​​​​​​​​ = data;
+        logger(`Unified window state ${​​​​​​​​​​​​​​​data.state}​​​​​​​​​​​​​​​`);
+        switch (state) {​​​​​​​​​​​​​​​
+            case 'ended': {​​​​​​​​​​​​​​​
+                lpLocalStorage.removeItem('lp_engagementId');
+                logger('Conversation ended: Local Storage Item lp_engagementId was removed!');
+                break;
+            }​​​​​​​​​​​​​​​
+            default:
+                break;
+        }​​​​​​​​​​​​​​​
+    }​​​​​​​​​​​​​​​,
+    async: true,
+    triggerOnce: false,
+}​​​​​​​​​​​​​​​);
+
+// Evaluate local storage when engagement displays. If stored value matches
+// data engagementId, auto click engagement button which auto starts 
+// conversation window.
+lpTag.events.bind({​​​​​​​​​​​​​​​​​​​​​​​​​​
+    eventName: 'OFFER_DISPLAY', 
+    appName: 'LP_OFFERS', 
+    func: function processThis(data) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+        if(lpLocalStorage.lp_engagementId == data.engagementId) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            (function() {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+                setTimeout(function() {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+                    autoClick(); 
+                    logger('Auto Click successful! oAuth window is open!'); 
+                    //lpLocalStorage.removeItem('lp_engagementId');
+                    //logger('Local Storage Item 'lp_engagementId was removed!');
+                }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​, 2500);
+            }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​)(); 
+        }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ else {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            return; 
+        }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ 
+    }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​, 
+    async: true, 
+    triggerOnce: true, 
+}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​);
+
+// Engagement button clicked: Check engagementId in local storage. If 'undefined',
+// get and save engagementId in local storage.
+lpTag.events.bind({​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    eventName: 'OFFER_CLICK',
+    appName: 'LP_OFFERS',
+    func: function processThis(data) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+        switch(lpLocalStorage.lp_engagementId) {​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+            case undefined:
+                lpLocalStorage.setItem('lp_engagementId', data.engagementId);
+                logger(`Engagement: ${​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​data.engagementName}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​ (${​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​lpLocalStorage.lp_engagementId}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​) displayed`);
+                break;
+            default:
+                break;
+        }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
+    }​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​,
+    async: true,
+    triggerOnce: true,
+}​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​);
+
+
+</script>
+<!-- END code to workaround lpTag messaging bug​​​​​​​
+</body>
+</html>
