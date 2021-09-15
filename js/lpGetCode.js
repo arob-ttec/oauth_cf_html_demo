@@ -66,8 +66,8 @@ function identityFn(callback) {
     callback({
         iss: 'Test',
         acr: 'loa1',
-        sub: 'test12356675555444'
-        //sub: checkCookie('LPSID-45322705') 
+        //sub: 'test12356675555444'
+        sub: checkCookie('LPSID-45322705') 
     });
 }
 
