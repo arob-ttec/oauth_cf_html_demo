@@ -7,7 +7,7 @@ function logger(text) {
 var code;
 
 var cnf = {
-    redirectURI: 'https://arob-ttec.github.io/oauth_cf_html_demo/',
+    redirectURI: 'https://arob-ttec.github.io/oauth_cf_html_demo/index.html',
     authURI: 'https://dev-ttec-arob.us.auth0.com/authorize',
     clientID: 'DHZEqPgrHeOeWn7BE0ihf5fYbGCmLUa5',
     response_type: 'code'
@@ -66,8 +66,8 @@ function identityFn(callback) {
     callback({
         iss: 'Test',
         acr: 'loa1',
-        sub: 'test12356675555444'
-        //sub: checkCookie('LPSID-45322705') 
+        //sub: 'test12356675555444'
+        sub: checkCookie('LPSID-45322705') 
     });
 }
 
