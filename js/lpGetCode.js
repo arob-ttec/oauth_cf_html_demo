@@ -27,6 +27,7 @@ lpGetCode = function (callback) {
     }
     else {
         console.log('Got the Authcode from redirect url::' + code);
+        logger('Got the Authcode from redirect url::' + code);
 
         var result = {
             ssoKey: code,
@@ -58,6 +59,23 @@ lpTag.sdes = lpTag.sdes || [];
     }
 };*/
 
+
+
+/* 9/16: Amanda Testing
+window.lpTag = window.lpTag || {};
+lpTag.sdes = lpTag.sdes||[];
+
+var data = {
+   "type": "ctmrinfo", //MANDATORY
+   "customerInfo": [{ 
+     "customerId": "12345-54321-67890-09876"
+   }]
+ };
+ 
+var fun = function() {};
+lpTag.sdes.send(data, fun);
+*/
+
 // Replaces engagement attributes API
 // READ: https://developers.liveperson.com/consumer-authentication-detailed-api.html
 lpTag.identities=[];
@@ -67,12 +85,12 @@ function identityFn(callback) {
         iss: 'Test',
         acr: 'loa1',
         //sub: 'test12356675555444'
-        sub: checkCookie('LPSID-45322705') 
+        sub: "AMANDATESTING"
     });
 }
 
 // check user location before sending customer info
-/*if (window.location.href.indexOf('/nfcu_auth/') > 0) {
+/*if (window.location.href.indexOf('/oauth_cf_html_demo/') > 0) {
     sendCtype();
 }*/
 
