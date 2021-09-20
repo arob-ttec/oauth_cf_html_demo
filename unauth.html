@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>oAuth Code Flow Testing</title>
+    <meta charset='UTF-8'>
+    <style type='text/css'></style>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+</head>
+
+
+
+
+<body>
+    <!-- BEGIN LivePerson Monitor Tag - Jim's UK Dev: 17243116; Jim's NA Dev: 54005696; -->
+    <script type='text/javascript' src='./js/lpTag.js'></script>
+    <!-- END LivePerson Monitor Tag -->
+
+    <!-- BEGIN Helper Functions, check cookie -->
+    <script type='text/javascript' src='./js/lpHelperFuncs.js'></script>
+    <!-- END Helper Functions, check cookie -->
+
+    <!-- BEGIN lpGetCode for oAuth (Code Flow) -->
+    <!--script type='text/javascript' src='./js/lpGetCode.js'></script-->
+    <!-- END lpGetCode for oAuth (Code Flow) -->
+
+    <div>
+        <h1>Unauth SDE Testing</h1>
+    </div>
+
+    <script type='text/javascript'>
+    lpTag.sdes = lpTag.sdes || [];
+
+    lpTag.sdes.push(
+        {
+            "type": "personal",
+            "personal": {
+                "firstname": "Amanda",
+                "lastname": "Liveperson",
+                "contacts": [{
+                    "email": "arobinson@liveperson.com",
+                }],
+                "company": "TexFlex"
+            }
+        });
+
+    </script>
+
+
+    <!-- BEGIN Set 'section' on page if applicable -->
+    <script type='text/javascript'>
+    //lpTag.section = ['Code_Flow_Demo'];
+    </script>
+    <!-- END Set 'section' on page if applicable -->
+
+    <!--div id="lpAuthButton"></div-->
+
+    <!-- BEGIN Auto Click Engagement Button. Added '_demo' to end of 
+        variable and local storage names to test multiple instances simultaneously -->
+    <!--script type='text/javascript' src='./js/lpEventsBinds.js'></script-->
+    <!-- END Auto Click Engagement Button -->
+</body>
+</html>
