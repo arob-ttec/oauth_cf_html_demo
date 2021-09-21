@@ -9,7 +9,7 @@
 
 
 
-<body>
+<body onLoad="pushSDEs();">
     <!-- BEGIN LivePerson Monitor Tag - Jim's UK Dev: 17243116; Jim's NA Dev: 54005696; -->
     <script type='text/javascript' src='./js/lpTag.js'></script>
     <!-- END LivePerson Monitor Tag -->
@@ -27,20 +27,23 @@
     </div>
 
     <script type='text/javascript'>
-    lpTag.sdes = lpTag.sdes || [];
+    function pushSDEs() {
+        lpTag.sdes = lpTag.sdes || [];
 
-    lpTag.sdes.push(
-        {
-            "type": "personal",
-            "personal": {
-                "firstname": "Amanda",
-                "lastname": "Liveperson",
-                "contacts": [{
-                    "email": "arobinson@liveperson.com",
-                }],
-                "company": "TexFlex"
+        lpTag.sdes.push(
+            {
+                "type": "personal",
+                "personal": {
+                    "firstname": "Amanda",
+                    "lastname": "Liveperson",
+                    "contacts": [{
+                        "email": "arobinson@liveperson.com",
+                    }],
+                    "company": "TexFlex"
+                }
             }
-        });
+        );
+    }
 
     </script>
 
